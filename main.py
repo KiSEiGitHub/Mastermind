@@ -39,7 +39,7 @@ def newCode():
 
 def Game():
     code = newCode()  # on récupère notre return qu'on stocke dans une autre variable
-    Tentative = 2  # on définit les tentatives sur 12
+    Tentative = 12  # on définit les tentatives sur 12
     choix = ""  # on définit notre choix en tant que chaine vide pour pouvoir controler chaque index d'str
 
     """
@@ -69,7 +69,7 @@ def Game():
 
     La condition est simple tant que i < 5. Pourquoi 5 ? car le code à 5 chiffres 
     """
-    print(code)
+
     while choix != code:
         nb_bien_place = 0
         nb_mal_place = 0
@@ -96,6 +96,11 @@ def Game():
 
 def Main():
     # appel juste Game
+    print('Règle du jeu')
+    print("- Le code est d'une longueur de 5 chiffres.")
+    print("- Les 5 chiffres sont suppérieur à 0 et inférieur à 6.")
+    print('- Vous avez 12 tentatives.')
+    print('-' * 20)
     Game()
 
 
