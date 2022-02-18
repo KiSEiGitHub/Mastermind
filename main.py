@@ -82,26 +82,16 @@ def Game():
             for i in range(5):
                 if choix[i] == code[i]:
                     nb_bien_place += 1
-                elif choix[i] != code[i]:
-                    if choix[i] not in code:
-                        pas_dans_le_code += 1
-                    else:
-                        nb_mal_place += 1
+                elif choix[i] not in code:
+                    pas_dans_le_code += 1
+                else:
+                    nb_mal_place += 1
 
-        # à chaque fin de tour on controle s'il nous reste des essais
-        Tentative -= 1
-        if Tentative < 1:
-            print('Vous avez perdu')
-            break
-        elif code == choix:
-            print('Vous avez gagner')
-            break
-        else:
-            print('-' * 20)
-            print(f"Bien placé(s) : {nb_bien_place} ")
-            print(f"mal placé(s): {nb_mal_place} ")
-            print(f"pas dans le code : {pas_dans_le_code} ")
-            print(f"Nombre de tentatives restante : {Tentative}")
+        print('-' * 20)
+        print(f"Bien placé(s) : {nb_bien_place} ")
+        print(f"mal placé(s): {nb_mal_place} ")
+        print(f"pas dans le code : {pas_dans_le_code} ")
+        print(f"Nombre de tentatives restante : {Tentative}")
 
 
 def Main():
